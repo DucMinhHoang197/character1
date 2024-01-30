@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./App.css";
 import { List } from "./component/list";
+import Avatar from "./component/leftview";
 
 const getSelections = (type, numOfElements) => {
   const result = [];
   for (let i = 1; i <= numOfElements; i++) {
     result.push({
       id: i,
-      url: `https://character-customization.netlify.app/character/${type}/${i}.png`,
+
+      url: `./character/${type}/${i}.png`,
     });
   }
   return result;
@@ -23,7 +25,7 @@ function App() {
   const [clothesL1Selection, setClothesL1Selection] = useState(0);
   const [clothesL2Selection, setClothesL2Selection] = useState(0);
   const [clothesL3Selection, setClothesL3Selection] = useState(0);
-  console.log(bodySelection, 1);
+  console.log(eyeSelection, "eye");
 
   return (
     <div className="container">
@@ -33,7 +35,9 @@ function App() {
         <h2 id="divider"></h2>
       </div>
       <div className="main">
-        <div className="leftview"></div>
+        <div className="leftview">
+          <Avatar bodySelection={bodySelection} />
+        </div>
         <div className="rightview">
           <List
             selected={bodySelection}
@@ -46,7 +50,7 @@ function App() {
             selected={eyeSelection}
             onChange={setEyeSelection}
             heading="Eye"
-            data={getSelections("eyebrows", 30)}
+            data={getSelections("eyes", 30)}
           />
           <List
             selected={hairSelection}

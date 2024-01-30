@@ -13,7 +13,7 @@ export const List = ({ heading, data, selected, onChange }) => {
         <ul className="list">
           {data.map((item, index) => {
             // console.log(index, "1111");
-            console.log(data, "data");
+            // console.log(data, "data");
             return (
               <li>
                 <div style={{ border: " 2px dotted #1C6EA4" }}>
