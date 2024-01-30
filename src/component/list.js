@@ -1,5 +1,4 @@
 import React from "react";
-
 /**
  *
  * heading - Tua de cua lua chon - string
@@ -13,18 +12,21 @@ export const List = ({ heading, data, selected, onChange }) => {
       <div>
         <ul className="list">
           {data.map((item, index) => {
-            console.log(index, "1111");
+            // console.log(index, "1111");
+            console.log(data, "data");
             return (
               <li>
-                <img
-                  className={index === selected ? "imageAvatar" : ``}
-                  onClick={() => {
-                    onChange(index);
-                  }}
-                  src={item.url}
-                  alt=""
-                  height="60px"
-                />
+                <div style={{ border: " 2px dotted #1C6EA4" }}>
+                  <img
+                    className={index === selected ? "imageAvatar" : ``}
+                    onClick={() => {
+                      onChange(index);
+                    }}
+                    src={item.url}
+                    alt=""
+                    height="60px"
+                  />
+                </div>
               </li>
             );
           })}

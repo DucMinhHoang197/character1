@@ -65,7 +65,7 @@ ul {
 .leftview {
   position: fixed;
   display: flex;
-  background-color: #a5510d;
+  /* background-color: #a5510d; */
   padding: 20px;
   width: 300px;
   height: 300px;
@@ -79,4 +79,7 @@ ul {
 
 .imageAvatar {
   background-color: gainsboro;
+}
+.img {
+  background-color: black;
 }

@@ -23,7 +23,8 @@ function App() {
   const [clothesL1Selection, setClothesL1Selection] = useState(0);
   const [clothesL2Selection, setClothesL2Selection] = useState(0);
   const [clothesL3Selection, setClothesL3Selection] = useState(0);
-  console.log(bodySelection);
+  console.log(bodySelection, 1);
+
   return (
     <div className="container">
       <div>
@@ -40,6 +41,7 @@ function App() {
             heading="Body"
             data={getSelections("body", 30)}
           />
+
           <List
             selected={eyeSelection}
             onChange={setEyeSelection}
