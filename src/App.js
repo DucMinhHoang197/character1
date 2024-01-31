@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { List } from "./component/list";
 import Avatar from "./component/leftview";
@@ -36,7 +36,9 @@ function App() {
     setClothesL2Selection(Math.floor(Math.random() * 5) + 1);
     setClothesL3Selection(Math.floor(Math.random() * 9) + 1);
   };
-
+  useEffect(() => {
+    generateRandomSelections();
+  }, []);
   return (
     <div className="container">
       <div>
@@ -57,7 +59,7 @@ function App() {
           <Avatar clothesL3Selection={clothesL3Selection} />
         </div>
         <button className="button" onClick={generateRandomSelections}>
-          Random
+          <span>Random</span>
         </button>
         <div className="rightview">
           <List
