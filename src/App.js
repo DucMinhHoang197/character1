@@ -42,7 +42,7 @@ function App() {
       <div>
         <p>CHARACTER</p>
         <h1>🛠️CUSTOMIZATION🛠️</h1>
-        <h2 id="divider"></h2>
+        <h2 id="divider">Character Customization Options</h2>
       </div>
       <div className="main">
         <div className="leftview">
