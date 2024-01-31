@@ -18,9 +18,9 @@ export const List = ({ heading, data, selected, onChange }) => {
               <li>
                 <div style={{ border: " 2px dotted #1C6EA4" }}>
                   <img
-                    className={index === selected ? "imageAvatar" : ``}
+                    className={index === selected - 1 ? "imageAvatar" : ``}
                     onClick={() => {
-                      onChange(index);
+                      onChange(index + 1);
                     }}
                     src={item.url}
                     alt=""

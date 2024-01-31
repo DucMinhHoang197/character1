@@ -83,3 +83,10 @@ ul {
 .img {
   background-color: black;
 }
+.button {
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  top: 60%;
+  left: 4%;
+}
